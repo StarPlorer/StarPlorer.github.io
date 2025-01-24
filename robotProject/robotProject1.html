@@ -16,29 +16,6 @@
             <a class="navbar-brand ps-3" href="../index.html">Park Soo Bin</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
-             <!-- 
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            -->
-            <!-- Navbar-->
-             <!-- 
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-            -->
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -90,30 +67,39 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Static Navigation</h1>
+                        <h1 class="mt-4">Nav 주행</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Static Navigation</li>
+                            <li class="breadcrumb-item">목표 : SLAM, Nav를 이용하여 시스템 구축</li>
+                            <li class="breadcrumb-item active">프로젝트 방향 : 서빙 로봇 시스템</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
                                 <p class="mb-0">
-                                    This page is an example of using static navigation. By removing the
-                                    <code>.sb-nav-fixed</code>
-                                    class from the
-                                    <code>body</code>
-                                    , the top navigation and side navigation will become static on scroll. Scroll down this page to see an example.
+                                    SLAM, NAV를 이용한 프로젝트. 로보티즈의 환경을 gazebo로 표현하여 사용. 서빙 로봇을 프로젝트의 방향성으로 설정. 
+                                    팀에서 내가 중점적으로 구현한 파트는 GUI. 각 노드간의 통신을 어떤 방법을 사용할지 적절하게 선택하는 것이 관건.
                                 </p>
                             </div>
                         </div>
+
+                        <div>
+                             <p class="mb-0">
+                                로보티즈에서 제공하는 gazebo환경에 SLAM, NAV, ROS2, PYQT를 이용하여 서빙 로봇 시스템을 만들었습니다.
+                                저는 그중 GUI파트를 담당했습니다. GUI툴은 PYQT를 이용했습니다. 윈도우 상에 간단하게 띄울 수 있어 테스트가 편했습니다.
+                                Pain Point는 GUI간 통신에서 어떤 통신 방법(Topic, Service, Action)을 사용할지 기준을 만드는 것에 어려움이였습니다.
+                                상호간의 통신의 송수신이 확실해야하는 부분에 Service통신을 사용하자고 했지만 팀원은 Service통신이 항상 보장된 것은 아니니 Topice을 여러번 송신하는 것으로 정하자고 주장했습니다.
+                                두 통신을 다 테스트해보고 문제가 없는 것들을 적절하게 사용했습니다. 상황에 따른 통신은 팀원들과 의논해 정했습니다.
+                             </p>
+                        </div>
+
+
                         <div style="height: 100vh"></div>
-                        <div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>
+                        <!--<div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>-->
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div class="text-muted">Copyright &copy; Your Website 2025</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
