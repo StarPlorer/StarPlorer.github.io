@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>자율 주행</title>
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="../index.html">Park Soo Bin</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Home</div>
+                            <a class="nav-link" href="../index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Introduce
+                            </a>
+                            <div class="sb-sidenav-menu-heading">History</div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#robotLayouts" aria-expanded="false" aria-controls="robotLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Robot
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div id="robotProjectList">
+                                
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#aiLayouts" aria-expanded="false" aria-controls="aiLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                AI
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div id="aiProjectList">
+                                
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#etcLayouts" aria-expanded="false" aria-controls="etcLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Etc
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div id="etcProjectList">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small"></div>
+                        Like it!
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">가상환경 자율 주행</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item">목표 : SLAM, NAV를 이용하여 시스템 구축</li>
+                            <li class="breadcrumb-item active">프로젝트 방향 : 서빙 로봇 시스템</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="mb-0">
+                                    SLAM, NAV를 이용한 프로젝트. 가상환경을 gazebo로 표현하여 사용. DBMS는 SQLITE사용. 서빙 로봇을 프로젝트의 방향성으로 설정. 
+                                    팀에서 나의 파트는 GUI.<br>각 노드간의 통신을 어떤 방법을 사용할지 적절하게 선택하는 것이 관건.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                             <p class="mb-0">
+                                gazebo의 가상환경에 SLAM, NAV, ROS2, PYQT를 이용하여 서빙 로봇 시스템을 만들었습니다.
+                                저는 PYQT를 이용한 GUI를 담당했습니다. 윈도우 상에 간단하게 띄울 수 있어 테스트가 편했습니다.<br>
+                                Pain Point는 GUI간 통신에서 어떤 통신 방법(Topic, Service, Action)을 사용할지 기준을 만드는 것에 어려움이였습니다.<br>
+                                상호간의 통신의 송수신이 확실해야하는 부분에 Service통신을 사용하자고 했지만 팀원은 Service통신이 항상 보장된 것은 아니니 Topice을 여러번 송신하는 것으로 정하자고 주장했습니다.<br>
+                                두 통신을 다 테스트해보고 문제가 없는 것들을 적절하게 사용했습니다. 상황에 따른 통신은 팀원들과 의논해 정했습니다. <br>
+                                <br>
+                             </p>
+                             <div margin-left:30%>전체적인 시스템 사용 사진입니다.</div>
+                             <img src="img/가상환경 자율주행/1.png" width="60%" height="30%" alt="1"><br><br>
+                             <p class="mb-0">
+                                테스트 영상
+                             </p>
+                            <iframe width="60%" height="400" src="https://www.youtube.com/embed/x2t57vaFH0U" 
+                                title="가상환경 자율주행 동영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
+                             <br><br><br>
+                             <p class="mb-0">
+                                다른 환경에서도 SLAM, NAV를 테스트해보고 싶어 가상환경을 만들어 매핑을 했습니다. 매핑을 하는 도중에 맵이 틀어지며 실제 환경과 맵이 매칭이 안되는 현상이 발생했습니다.<br>
+                                이유는 SLAM의 기능인 튜닝이 잘못 적용되었기 때문이였습니다. <br>매핑된 맵과 주변 환경의 데이터를 조율하여 매핑된 맵을 튜닝하는데 환경이 실외거나 오브젝트가 너무 적으면 오차가 심하게 발생해 실제 환경과 맵이 매칭이 되지않는 현상이 있었습니다.<br>
+                                튜닝 옵션을 끄거나 맵에 오브젝트를 추가해 해결할 수 있습니다. <br><br>
+                                가상환경에서 오브젝트를 더 추가하여 매핑 오차를 줄인 테스트 결과입니다.
+                             </p>
+                             <img src="img/가상환경 자율주행/2.png" width="60%" height="30%" alt="2">
+
+                        </div>
+
+
+                        <div style="height: 100vh"></div>
+                        <!--<div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>-->
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2025</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/subPageLinkModule.js"></script>
+    </body>
+</html>
