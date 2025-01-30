@@ -82,23 +82,40 @@
 
                         <div>
                              <p class="mb-0">
-                                순찰, 추적 시스템 로봇을 만들었습니다. 순찰과 추적이라는 기능을 경비 로봇으로 컨셉화해 프로젝트를 진행했습니다.
-                                컨셉 디자인, 시스템 디자인, 시스템 디테일 디자인순으로 각 모듈별 기능을 세분화하여 설계했고 주고받는 인터페이스를 명확히했습니다.
+                                순찰, 추적 시스템 로봇을 만들었습니다. 순찰과 추적이라는 기능을 경비 로봇으로 컨셉화해 프로젝트를 진행했습니다.<br>
+                                컨셉 디자인, 시스템 디자인, 시스템 디테일 디자인순으로 각 모듈별 기능을 세분화하여 설계했고 주고받는 인터페이스를 명확히했습니다.<br>
                                 테스트 결과 어떤 기준을 몇 번 이상 성공해야 시스템이 성공적으로 제작되었다는 것을 간주할 수 있는 기준을 만들었습니다.
-                            
+                             </p><br>
+                             <div margin-left:30%>전체적인 디자인 설계입니다.</div>
+                             <img src="img/추적 시스템/1.jpg" width="60%" height="30%" alt="1"><br><br>
 
-
-                             </p>
-                             <div margin-left:30%>간단한 제어 프로세스 동영상입니다.</div>
-                             <img src="img/robotProject1/1.png" width="60%" height="30%" alt="1">
                              <p class="mb-0">
-                                테스트 영상
+                                저는 모듈 중 추적 모듈을 중심적으로 제작했습니다. 정해진 순찰 루트를 순회하고 추적할 객체를 탐지하면 순찰을 중지합니다.<br>
+                                객체 추적을 중지하면 순찰을 중지했던 위치로 돌아와 순찰을 재시작합니다. 사용자의 복귀 명령이 없다면 계속해서 순찰을하고 복귀명령을 받으면 스테이션으로 복귀합니다.<br>
+                                이것은 순찰 모듈 테스트 동영상입니다. 봇이 포지션에 정확히 위치하기 위해서 자신의 위치와 각도를 계속해서 조정하며 다음 프로세스로 넘어가지 못하는 현상이 있습니다.<br>
+                                이것을 해결하기위해 순찰 포인트를 순찰 루트의 정중아에 두고 yaml파일을 수정해 포지션의 오차 허용 범위를 높였습니다.<br>
                              </p>
                              <br>
-                             <p class="mb-0">
+                             <iframe width="60%" height="400" src="https://www.youtube.com/embed/bGWKW-rjLi8"
+                                 title="순찰 모듈 테스트" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                             </iframe>
+                             <br><br>
 
+                             <p class="mb-0">
+                                이것은 저와 팀원들의 모듈을 머지한 전체적인 시스템의 테스트 동영상입니다. 로봇이 순찰하다가 객체를 발견하면 탐지하여 객체와 일정거리를 유지하며 추적합니다.<br>
+                                추적 중에 객체가 사라진 케이스는 해당 객체를 놓쳤거나 현장에서 검거하여 해결된 두 가지 경우입니다.
+                                객체가 사라지면 로봇은 객체를 발견하기위해 회전을 합니다. 이때 사람이 재순찰 명령을 주면 순찰을 시작합니다. 
                              </p>
-                             <img src="img/robotProject1/2.png" width="60%" height="30%" alt="2">
+                             <br>
+                             <iframe width="60%" height="400" src="https://www.youtube.com/embed/3NXmPRdCXLE"
+                                 title="순찰 모듈 테스트" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                             </iframe>    
+                             <br><br>
+                             <p class="mb-0">
+                                객체 인식률은 80%이상, 추적은 10회중 8회 10초이상 추적 유지시 성공으로 간주하였고 이를 충족하여 결과는 성공이였습니다.<br>
+                                보완사항은 봇과 관제의 통신이 끊기거나 배터리가 다떨어졌을 때의 로봇의 대처 모듈이 없었으니 보완할 모듈을 추가해야합니다.
+                             </p>
+                             <br>
 
                         </div>
 
