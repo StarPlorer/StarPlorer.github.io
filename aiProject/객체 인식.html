@@ -87,24 +87,30 @@
                                 1. 팀원들의 라벨링 가이드를 통일하기. 2. 데이터 더 많이 넣기. 3. 불량품을 검사하는 환경 통제하기<br>
                                 팀원들의 라벨링 기준이 생각보다 다양했습니다. 라벨링 가이드를 통일했습니다. 데이터를 더 많이 넣으면 당연히 모델의 성능이 향상될 것이라 생각하고 데이터를 더 넣었습니다. <br>
                                 검사 환경을 통제하였습니다. 환경을 제한하면 제한된 환경만 고려하면 되기에 예측률이 더 올라갔습니다. 위 세가지 방법을 적용한 결과 예측률이 약 30% 증가했습니다.<br>
+                                아래 동영상은 객체 이미지를 수집하고 객체를 인식하는 프로세스 동영상입니다.<br>
                              </p>
                              <br>
-                             <div margin-left:30%>라벨링 사진입니다.</div>
-                             <img src="img/객체 인식/1.png" width="60%" height="30%" alt="1">
+                             <iframe width="60%" height="400" src="https://www.youtube.com/embed/m9DEaSEJu10" 
+                                 title="컨베이어 벨트 작동 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                             </iframe>
+                             
                              <br><br>
+                             <div margin-left:30%>라벨링한 사진입니다.</div>
+                             <img src="img/객체 인식/1.png" width="60%" height="30%" alt="1">
+                             <br><br><br>
                              <div margin-left:30%>모델 테스트 결과입니다. 감지한 이미지를 학습시킨 객체로 인식했습니다.</div>
                              <img src="img/객체 인식/2.png" width="60%" height="30%" alt="2"><br><br>
                              
                              <p class="mb-0">
                                 센서 데이터를 이용해 동영상의 3d 데이터를 라벨링했습니다. 라이더 데이터와 카메라 이미지 데이터를 퓨전했습니다. 3d의 경우 2d보다 라벨링의 과정이 더 섬세하고 복잡했습니다.<br>
-                             
-                             </p><br>
-                             <div margin-left:30%>센서 퓨전을 이용한 3d데이터 라벨링입니다.</div>
+                                센서 퓨전을 이용한 3d데이터 라벨링입니다.
+                             </p>
+                             <div margin-left:30%></div>
                              <img src="img/객체 인식/3.png" width="60%" height="30%" alt="3"><br><br>
-                             <img src="img/객체 인식/4.png" width="60%" height="30%" alt="4"><br>
-                             
-
-
+                             <img src="img/객체 인식/4.png" width="60%" height="30%" alt="4"><br><br>
+                             <p class="mb-0">
+                                3d 센서 퓨전 데이터는 상당히 민감해서 사진마다 인식률이 큰 분산을 보였습니다. 
+                             </p>
                         </div>
 
 
