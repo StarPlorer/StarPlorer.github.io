@@ -95,7 +95,7 @@ function createListLayouts(robotFiles, aiFiles, etcFiles) {
 }
 
 // 리스트 불러오는 모듈 추가
-const RobotFiles = ['가상환경 자율주행.html','로봇 암 제어.html','추적 시스템.html'];
+const RobotFiles = ['가상환경 자율주행.html','로봇 암 제어.html','추적 시스템.html','AWC.html'];
 const AiFiles = ['객체 인식.html'];
 const EtcFiles = ['웹 테스트 영상.html'];
 
