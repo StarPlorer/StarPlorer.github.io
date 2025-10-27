@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>추적 시스템</title>
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="../index.html">Park Soo Bin</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Home</div>
+                            <a class="nav-link" href="../index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Introduce
+                            </a>
+                            <div class="sb-sidenav-menu-heading">History</div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#robotLayouts" aria-expanded="false" aria-controls="robotLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Robot
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div id="robotProjectList">
+                                
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#aiLayouts" aria-expanded="false" aria-controls="aiLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                AI
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div id="aiProjectList">
+                                
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#etcLayouts" aria-expanded="false" aria-controls="etcLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Etc
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div id="etcProjectList">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small"></div>
+                        Like it!
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">AWC</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item">목표 :반도체 웨이퍼 로봇의 AWC 기능 구현</li>
+                            <li class="breadcrumb-item active"></li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="mb-0">
+                                    반도체 웨이퍼 센터링을 정확하게 하기위한 AWC 기능구현<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                             <p class="mb-0">
+                                반도체를 정확하게 중앙에 놓기위해 보정 알고리즘 구현. <br>
+                                기존의 캘리브레이션 데이터의 좌표를 기준으로 웨이퍼가 들어왔을때 나갔을때의 좌표를 이용하여 보정치를 계산<br>
+                                보정치가 많이 차이난다면 보정치만큼 좌표를 이동하여 센터링.
+                             </p><br>
+                             <iframe width="60%" height="400" src="https://www.youtube.com/embed/djMrQBQs6ts?si=-ROX0z1aj84eVlPt"
+                                 title="AWC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                             </iframe>
+                             <br>
+                             <p class="mb-0">
+                               약 30번정도 테스트 측정 결과 가로 세로 0.04mm정도의 원모양으로 오차 범위를 보임.<br>허용 오차허용수준이 0.05mm이하면 사용가능한 모듈
+                             </p><br>
+
+                        </div>
+
+
+                        <div style="height: 100vh"></div>
+                        <!--<div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>-->
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2025</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../js/scripts.js"></script>
+        <script src="../js/subPageLinkModule.js"></script>
+    </body>
+</html>
